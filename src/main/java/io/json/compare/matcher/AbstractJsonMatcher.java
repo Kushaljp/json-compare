@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-abstract class AbstractJsonMatcher {
+public abstract class AbstractJsonMatcher {
 
     protected static final String JSON_PATH_EXP_PREFIX = "#(";
     protected static final String JSON_PATH_EXP_SUFFIX = ")";
@@ -54,7 +54,7 @@ abstract class AbstractJsonMatcher {
         return removeEscapes(value);
     }
 
-    protected static Optional<String> extractJsonPathExp(String field) {
+    public static Optional<String> extractJsonPathExp(String field) {
         if (field.startsWith(JSON_PATH_EXP_PREFIX) && field.endsWith(JSON_PATH_EXP_SUFFIX)) {
             return Optional.of(field.substring(JSON_PATH_EXP_PREFIX.length(), field.length() - JSON_PATH_EXP_SUFFIX.length()));
         }

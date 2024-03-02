@@ -12,11 +12,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-class JsonArrayMatcher extends AbstractJsonMatcher {
+public class JsonArrayMatcher extends AbstractJsonMatcher {
 
     private final Set<Integer> matchedPositions = new HashSet<>();
 
-    JsonArrayMatcher(JsonNode expected, JsonNode actual, JsonComparator comparator, Set<CompareMode> compareModes) {
+    public JsonArrayMatcher(JsonNode expected, JsonNode actual, JsonComparator comparator, Set<CompareMode> compareModes) {
         super(expected, actual, comparator, compareModes);
     }
 
